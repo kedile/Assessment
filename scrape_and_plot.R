@@ -65,4 +65,13 @@ p1 <- ggplot(df_bar, aes(x = Year, y = log10(Total_Deaths + 1), fill = Type)) +
     y = "Total Death Toll (log10)",
     fill = "Disaster Type"
   ) +
-  theme_minimal()
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(size = 20, face = "bold"),
+    axis.title = element_text(size = 25),
+    axis.text = element_text(size = 20),
+    legend.title = element_text(size = 16),
+    legend.text = element_text(size = 14)
+  )
+
+print(p1)
